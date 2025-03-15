@@ -1,15 +1,9 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
-    const dispatch = createEventDispatcher();
-  
-    const handleEditar = () => {
-      dispatch('editar');
-    }
-  
-    const handleEliminar = () => {
-      dispatch('eliminar');
-    }
-  </script>
+   
+    export let eliminarCancion;
+    export let editarCancion;
+    
+</script>
   
   <style>
     button {
@@ -36,5 +30,5 @@
     }
   </style>
   
-  <button on:click={handleEditar}>Editar</button>
-  <button on:click={handleEliminar}>Eliminar</button>
+  <button on:click={editarCancion}>Editar</button>
+  <button on:click={eliminarCancion}>Eliminar</button>
